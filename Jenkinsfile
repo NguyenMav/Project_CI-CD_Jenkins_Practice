@@ -23,18 +23,18 @@ pipeline {
             post {
                 success {
                     emailext(
-                        to: 'zung.nguyen777@gmail.com',
+                        attachLog: true,
+                        mail to: "zung.nguyen777@gmail.com",
                         subject: "$EMAIL_SUBJECT_SUCCESS - Unit and Integration Tests",
-                        body: "The Unit and Integration Tests stage has succeeded. Refer to report.",
-                        attachLog: true
+                        body: "The Unit and Integration Tests stage has succeeded. Refer to report."
                     )
                 }
                 failure {
                     emailext(
-                        to: 'zung.nguyen777@gmail.com',
+                        attachLog: true,
+                        mail to: "zung.nguyen777@gmail.com",
                         subject: "$EMAIL_SUBJECT_FAILURE - Unit and Integration Tests",
-                        body: "The Unit and Integration Tests stage has failed. Refer to report.",
-                        attachLog: true
+                        body: "The Unit and Integration Tests stage has failed. Refer to report."
                     )
                 }
             }
@@ -55,18 +55,18 @@ pipeline {
             post {
                 success {
                     emailext(
-                        to: 'zung.nguyen777@gmail.com',
+                        attachLog: true,
+                        mail to: "zung.nguyen777@gmail.com",
                         subject: "$EMAIL_SUBJECT_SUCCESS - Security Scan",
-                        body: "The Security Scan stage has succeeded. Refer to report.",
-                        attachLog: true
+                        body: "The Security Scan stage has succeeded. Refer to report."
                     )
                 }
                 failure {
                     emailext(
-                        to: 'zung.nguyen777@gmail.com',
+                        attachLog: true,
+                        mail to: "zung.nguyen777@gmail.com",
                         subject: "$EMAIL_SUBJECT_FAILURE - Security Scan",
-                        body: "The Security Scan stage has failed. Refer to report.",
-                        attachLog: true
+                        body: "The Security Scan stage has failed. Refer to report."
                     )
                 }
             }
