@@ -1,11 +1,6 @@
 pipeline {
     agent any
     
-    environment {
-        EMAIL_SUBJECT_SUCCESS = "Jenkins Pipeline Stage Success!"
-        EMAIL_SUBJECT_FAILURE = "Jenkins Pipeline Stage Failure!"
-    }
-    
     stages {
         stage('Build') {
             steps {
@@ -25,7 +20,7 @@ pipeline {
                     emailext(
                         attachLog: true,
                         to: "zung.nguyen777@gmail.com",
-                        subject: "$EMAIL_SUBJECT_SUCCESS - Unit and Integration Tests",
+                        subject: "Stage Success - Unit and Integration Tests",
                         body: "The Unit and Integration Tests stage has succeeded. Refer to report."
                     )
                 }
@@ -33,7 +28,7 @@ pipeline {
                     emailext(
                         attachLog: true,
                         to: "zung.nguyen777@gmail.com",
-                        subject: "$EMAIL_SUBJECT_FAILURE - Unit and Integration Tests",
+                        subject: "Stage Failure - Unit and Integration Tests",
                         body: "The Unit and Integration Tests stage has failed. Refer to report."
                     )
                 }
@@ -57,7 +52,7 @@ pipeline {
                     emailext(
                         attachLog: true,
                         to: "zung.nguyen777@gmail.com",
-                        subject: "$EMAIL_SUBJECT_SUCCESS - Security Scan",
+                        subject: "Stage Success - Security Scan",
                         body: "The Security Scan stage has succeeded. Refer to report."
                     )
                 }
@@ -65,7 +60,7 @@ pipeline {
                     emailext(
                         attachLog: true,
                         to: "zung.nguyen777@gmail.com",
-                        subject: "$EMAIL_SUBJECT_FAILURE - Security Scan",
+                        subject: "Stage Failure - Security Scan",
                         body: "The Security Scan stage has failed. Refer to report."
                     )
                 }
