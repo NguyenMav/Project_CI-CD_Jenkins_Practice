@@ -2,8 +2,8 @@ pipeline {
     agent any
     
     environment {
-        EMAIL_SUBJECT_SUCCESS = "Jenkins Pipeline Stage Success"
-        EMAIL_SUBJECT_FAILURE = "Jenkins Pipeline Stage Failure"
+        EMAIL_SUBJECT_SUCCESS = "Jenkins Pipeline Stage Success!"
+        EMAIL_SUBJECT_FAILURE = "Jenkins Pipeline Stage Failure!"
     }
     
     stages {
