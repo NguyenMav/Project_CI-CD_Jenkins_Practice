@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Stage 1: Build'
                 echo 'Tool: Maven'
-                echo 'Description: Compiles the source code and packages it into a deployable format (e.g., a JAR or WAR file). This stage ensures that the code is correctly built and ready for further testing and deployment.'
+                echo 'Description: Compiles the source code and packages it into a deployable format. This stage ensures that the code is correctly built and ready for further testing and deployment.'
             }
         }
         stage('Unit and Integration Tests') {
